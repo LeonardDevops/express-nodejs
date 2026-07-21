@@ -1,5 +1,8 @@
-exports.paginaInicial = (req, res) => {
-res.render('index');
+exports.paginaInicial = (req, res, next) => {
+    res.render('index', {
+        titulo:"este e nosso titulo "
+    });
+    next();
 }
 
 exports.trataPost= (req , res) => {
